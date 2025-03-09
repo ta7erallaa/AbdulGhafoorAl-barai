@@ -1,0 +1,107 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* Catppuccin Mocha Color Palette */
+:root {
+
+  --angle: 0deg;
+  --base: #1e1e2e;
+  /* Base color */
+  --text: #cdd6f4;
+  /* Text color */
+  --surface0: #313244;
+  /* Surface 0 */
+  --surface1: #45475a;
+  /* Surface 1 */
+  --overlay0: #6c7086;
+  /* Overlay 0 */
+  --lavender: #b4befe;
+  /* Accent color (lavender) */
+  --green: #a6e3a1;
+  /* Accent color (green) */
+  --pink: #f5c2e7;
+  /* Accent color (pink) */
+  --blue: #89b4fa;
+  /* Accent color (blue) */
+}
+
+/* Apply Cairo font and base styles */
+body {
+  font-family: 'Cairo', sans-serif;
+  /* direction: rtl; */
+  /* Right-to-left text direction for Arabic */
+  margin: 0;
+  padding: 0;
+  background-color: var(--base);
+  color: var(--text);
+}
+
+/* Header Styles */
+header {
+  background-color: var(--surface0);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+  color: var(--lavender);
+}
+
+/* Landing Page Section */
+.landing {
+  position: relative;
+  height: calc(100vh - 100px);
+  background-image: url('../assets/images/landing/abdulGhafoor.webp');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 50px;
+  direction: rtl;
+}
+
+.overlay {
+  max-width: 600px;
+  padding: 30px;
+  background-color: rgba(30, 30, 46, 0.7);
+  border: 4px solid;
+  border-image: linear-gradient(var(--angle), var(--lavender), var(--green), var(--pink), var(--blue)) 1;
+  text-align: right;
+  border-radius: 10px;
+  overflow: hidden;
+  direction: rtl;
+  animation: 10s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.overlay p {
+  font-size: 1.5em;
+  line-height: 1.8;
+  color: var(--green);
+  margin: 0;
+  direction: ltr;
+}
+
+.overlay .ltr-text {
+  color: var(--lavender);
+  text-align: left;
+  /* line-height: 30px; */
+}

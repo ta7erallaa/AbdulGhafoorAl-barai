@@ -56,7 +56,7 @@ header h1 {
 /* Landing Page Section */
 .landing {
   position: relative;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 110px);
   background-image: url('../assets/images/landing/abdulGhafoor.webp');
   background-size: cover;
   background-position: center;
